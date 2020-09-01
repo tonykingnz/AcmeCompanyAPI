@@ -32,8 +32,7 @@ paths:
       tags:
       - store
       summary: List Stores
-      x-swagger-router-controller: app.api
-      operationId: listStore
+      operationId: app.listStore
       parameters:
       - name: nameTerm
         in: query
@@ -86,8 +85,7 @@ paths:
       tags:
       - store
       summary: Add new Store
-      x-swagger-router-controller: app.api
-      operationId: addStore
+      operationId: app.addStore
       requestBody:
         content:
           application/json:
@@ -115,8 +113,7 @@ paths:
       tags:
       - store
       summary: Update Store profile
-      x-swagger-router-controller: app.api
-      operationId: updateStore
+      operationId: app.updateStore
       parameters:
       - name: storeId
         in: path
@@ -147,8 +144,7 @@ paths:
       tags:
       - store items
       summary: list store items
-      x-swagger-router-controller: app.api
-      operationId: listStoreItems
+      operationId: app.listStoreItems
       parameters:
       - name: storeId
         in: path
@@ -197,8 +193,7 @@ paths:
       tags:
       - store items
       summary: create store item - product/service
-      x-swagger-router-controller: app.api
-      operationId: addStoreItem
+      operationId: app.addStoreItem
       parameters:
       - name: storeId
         in: path
@@ -229,8 +224,7 @@ paths:
       tags:
       - store orders
       summary: Create an store order for possible payment
-      x-swagger-router-controller: app.api
-      operationId: addStoreOrder
+      operationId: app.addStoreOrder
       parameters:
       - name: storeId
         in: path
