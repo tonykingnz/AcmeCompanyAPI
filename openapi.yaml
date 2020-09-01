@@ -1,6 +1,6 @@
 openapi: 3.0.1
 info:
-  title: Hello, World!
+  title: ACME WORKS API - STUDY CASE
   description: '[MVP] ACME Company B2C API'
   termsOfService: http://acme.io/terms/
   contact:
