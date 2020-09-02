@@ -14,6 +14,7 @@ def addStoreItem():
     return NoContent
 def addStoreOrder():
     return NoContent
+
 logging.basicConfig(level=logging.INFO)
 
 app = connexion.App(__name__)
