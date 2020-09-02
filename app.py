@@ -2,8 +2,17 @@ import connexion
 import logging
 from connexion import NoContent
 
-def listStore():
-    return NoContent
+from exceptions import *
+
+from storeService import list
+
+def listStore(nameTerm, addressTerm, pageSize, pageIndex, orderBy):
+    try: 
+        response = list(nameTerm, addressTerm, pageSize, pageIndex, orderBy)
+        return (response, 200)
+    except APICustomError as e:
+        return ("bad request", 400)
+
 def addStore():
     return NoContent
 def updateStore():

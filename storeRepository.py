@@ -2,7 +2,7 @@ import psycopg2
 
 
 def list(name, address, pageSize, pageIndex, orderBy):
-    connection = psycopg2.connect(user = "#####", password = "*****", host = "127.0.0.1", port = "5432", database = "acme_db")
+    connection = psycopg2.connect(user = "postgres", password = "postgres", host = "0.0.0.0", port = "5432", database = "acme_db")
     rs = connection.query("""
         select 
             * 
@@ -16,11 +16,11 @@ def list(name, address, pageSize, pageIndex, orderBy):
             (${storeId} is null or storeId = ${storeId})
         limit ${pageSize} + 1 offset ${pageIndex} * ${pageSize}
     """)
-    conteudo = []
+    content = []
     for item in rs:
-        conteudo[i] = rs.resolve()
+        content[i] = rs.resolve()
     lastPage = true
-    if conteudo.size > pageSize:
+    if content.size > pageSize:
         lastPage = false
-        conteudo.removeLastElement()
-    return PageList(conteudo, pageSize, pageIndex. lastPage)
+        content.removeLastElement()
+    return PageList(content, pageSize, pageIndex. lastPage)

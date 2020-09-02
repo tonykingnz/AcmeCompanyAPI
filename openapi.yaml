@@ -38,7 +38,7 @@ paths:
         in: query
         schema:
           type: string
-      - name: addresTerm
+      - name: addressTerm
         in: query
         schema:
           type: string
