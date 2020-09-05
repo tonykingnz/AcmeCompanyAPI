@@ -13,5 +13,4 @@ RUN pip install psycopg2
 RUN pip install swagger-ui-bundle
 RUN pip install openapi-spec-validator
 
-CMD bash
-
+CMD vim

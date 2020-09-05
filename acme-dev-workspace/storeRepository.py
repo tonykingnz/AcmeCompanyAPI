@@ -2,7 +2,7 @@ import psycopg2
 
 
 def list(name, address, pageSize, pageIndex, orderBy):
-    connection = psycopg2.connect(user = "postgres", password = "postgres", host = "0.0.0.0", port = "5432", database = "acme_db")
+    connection = psycopg2.connect(user = "postgres", password = "postgres", host = "acmecompanyapi_acme-db-postgres_1", port = "5432", database = "acme-db")
     rs = connection.query("""
         select 
             * 

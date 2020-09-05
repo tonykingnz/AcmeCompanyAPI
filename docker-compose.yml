@@ -2,19 +2,19 @@ version: '3'
 
 services:
     acme-dev-workspace:
-        build: ./acme-dev-workspace
+        image: tonykingnz/acme-workspace-connexion:3.8.5buster
         volumes:
             - ./acme-dev-workspace:/root
         ports:
             - 8080:8080
         depends_on:
             - acme-db-postgres
+              
     acme-db-postgres:
-        image: postgres:alpine
+        image: 'postgres:alpine'
         ports:
-            - 5432:5432
+            - "5432:5432"
         environment:
             - POSTGRES_USER=postgres
             - POSTGRES_PASSWORD=postgres
             - POSTGRES_DB=acme-db
-

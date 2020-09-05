@@ -6,6 +6,10 @@ __pycache__/
 # C extensions
 *.so
 
+#PostgresSQL database login
+database.ini
+
+
 # Distribution / packaging
 .Python
 build/
