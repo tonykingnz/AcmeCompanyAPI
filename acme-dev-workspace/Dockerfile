@@ -4,6 +4,7 @@ RUN apt-get update
 
 RUN apt install git
 RUN apt install vim -y
+RUN apt-get install postgresql
 
 RUN pip install --upgrade pip
 
